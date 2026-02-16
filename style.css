@@ -63,7 +63,8 @@ main {
 
 /* Subtle tinted backgrounds */
 .armstrong { background: #fff8dc; }  /* soft yellow */
-.gores     { background: #ffe5cc; }  /* soft orange */
+.gores { background: #e2e6ec; }
+
 .owen      { background: #f6d1e4; }  /* soft raspberry */
 .brodkey   { background: #ffe0cc; }  /* soft apricot */
 
