@@ -1,4 +1,6 @@
-/* style.css */
+/* =========================
+   Base Layout
+   ========================= */
 
 body {
   margin: 0;
@@ -9,7 +11,6 @@ body {
   align-items: center;
 }
 
-/* Masthead spacing reduced so the first image is properly visible on load */
 header {
   margin: 2.2rem 0 1.6rem 0;
 }
@@ -25,9 +26,14 @@ main {
   max-width: 1000px;
 }
 
+/* =========================
+   Cards
+   ========================= */
+
 .card {
   padding: 2rem;
   margin-bottom: 4rem;
+  border-radius: 8px;   /* Soft edges without becoming “UI cards” */
 }
 
 .card-images {
@@ -54,21 +60,30 @@ main {
   display: block;
 }
 
-/* Only the FIRST block (Armstrong) should be shorter on initial view */
+/* =========================
+   Special Tuning
+   ========================= */
+
+/* Armstrong: limit first-screen dominance */
 .card.armstrong img {
-  max-height: 55vh;          /* adjust to taste: 45vh–65vh */
+  max-height: 55vh;
   width: auto;
   margin: 0 auto;
 }
 
-/* Subtle tinted backgrounds */
-.armstrong { background: #fff8dc; }  /* soft yellow */
-.gores { background: #e2e6ec; }
+/* Subtle background tones */
 
+.armstrong { background: #fff8dc; }  /* pale butter */
+.gores     { background: #e9edf2; }  /* soft steel grey */
 .owen      { background: #f6d1e4; }  /* soft raspberry */
-.brodkey   { background: #ffe0cc; }  /* soft apricot */
+.brodkey   { background: #f3e6d8; }  /* warm parchment */
+
+/* =========================
+   Mobile Adjustments
+   ========================= */
 
 @media (max-width: 600px) {
+
   header {
     margin: 1.6rem 0 1.2rem 0;
   }
@@ -77,7 +92,22 @@ main {
     font-size: 2.2rem;
   }
 
-  /* Make Armstrong even less tall on iPhone */
+  .card {
+    padding: 1.4rem;
+    margin-bottom: 2.6rem;
+    border-radius: 10px;
+  }
+
+  /* Keep two images side-by-side on mobile */
+  .card.two .card-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card.three .card-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Reduce Armstrong height slightly more on mobile */
   .card.armstrong img {
     max-height: 45vh;
   }
