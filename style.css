@@ -1,0 +1,65 @@
+
+body {
+    margin: 0;
+    font-family: Courier, monospace;
+    background: #faf9f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    margin: 4rem 0 3rem 0;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+}
+
+.card {
+    padding: 2rem;
+    margin-bottom: 4rem;
+}
+
+.card-images {
+    display: grid;
+    gap: 1rem;
+    align-items: end;
+}
+
+.card.one .card-images {
+    grid-template-columns: 1fr;
+}
+
+.card.two .card-images {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card.three .card-images {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Subtle tinted backgrounds */
+.armstrong { background: #fff8dc; }  /* soft yellow */
+.gores     { background: #ffe5cc; }  /* soft orange */
+.owen      { background: #f6d1e4; }  /* soft raspberry */
+.brodkey   { background: #ffe0cc; }  /* soft apricot */
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+}
