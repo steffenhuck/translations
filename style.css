@@ -79,6 +79,25 @@ main {
 .brodkey   { background: #f3e6d8; }  /* warm parchment */
 
 /* =========================
+   Signature
+   ========================= */
+
+.sig{
+  display: block;
+  margin: 3rem 0 4rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  color: rgba(0,0,0,0.45);
+  text-decoration: none;
+}
+
+.sig:hover{
+  color: rgba(0,0,0,0.75);
+}
+
+
+/* =========================
    Mobile Adjustments
    ========================= */
 
